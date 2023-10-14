@@ -21,5 +21,3 @@ jobs:
         with:
           name: AndroidCICD.apk
           path: app/build/outputs/apk/app-debug.apk
-
-# 1
