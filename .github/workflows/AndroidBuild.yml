@@ -2,18 +2,21 @@
 
  on:
    pull_request:
-     branches: [ "master" ]
+     branches: ["master"]
    push:
-     branches: [ "master" ]
+     branches: ["master"]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@4.1.0
       - name: Setup Java JDK
         uses: actions/setup-java@3.13.0
+
       - name: Build with Gradle
         run: ./gradlew build
       - name: Upload a Build Artifact
