@@ -21,6 +21,10 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+
+      # permission denied: https://github.com/actions/starter-workflows/issues/171
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
